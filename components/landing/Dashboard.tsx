@@ -48,7 +48,7 @@ const Dashboard = ({ suppliers = [], categories = [] }: any) => {
               ))}
             </div>
 
-            <Link href="/dashboard" className="btn-primary mt-8">
+            <Link href="/app-dashboard" className="btn-primary mt-8">
               Open Dashboard
             </Link>
           </div>

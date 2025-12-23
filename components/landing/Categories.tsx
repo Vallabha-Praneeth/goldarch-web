@@ -34,7 +34,7 @@ const Categories = ({ categories = [], suppliers = [] }: any) => {
               {categories.length} Product Categories
             </h2>
           </div>
-          <Link href="/dashboard" className="btn-secondary self-start md:self-auto flex items-center gap-2 group">
+          <Link href="/app-dashboard/suppliers" className="btn-secondary self-start md:self-auto flex items-center gap-2 group">
             View All Suppliers
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>

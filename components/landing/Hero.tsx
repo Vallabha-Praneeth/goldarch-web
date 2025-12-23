@@ -36,11 +36,11 @@ const Hero = ({ suppliers = [], categories = [] }: any) => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-late">
-            <Link href="/dashboard" className="btn-gold flex items-center gap-2 group">
+            <Link href="/app-dashboard" className="btn-gold flex items-center gap-2 group">
               Launch Supplier Atlas
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/dashboard" className="btn-secondary">
+            <Link href="/app-dashboard" className="btn-secondary">
               View Dashboard
             </Link>
           </div>

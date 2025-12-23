@@ -42,10 +42,10 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/dashboard" className="px-5 py-2.5 text-sm font-medium text-foreground hover:text-gold transition-colors">
+            <Link href="/auth" className="px-5 py-2.5 text-sm font-medium text-foreground hover:text-gold transition-colors">
               Sign In
             </Link>
-            <Link href="/dashboard" className="px-5 py-2.5 rounded-full bg-foreground text-background text-sm font-medium hover:scale-105 transition-transform shadow-soft">
+            <Link href="/app-dashboard" className="px-5 py-2.5 rounded-full bg-foreground text-background text-sm font-medium hover:scale-105 transition-transform shadow-soft">
               Get Started
             </Link>
           </div>
@@ -76,10 +76,10 @@ const Header = () => {
                 Contact
               </a>
               <div className="flex gap-3 mt-2">
-                <Link href="/dashboard" className="flex-1 px-5 py-2.5 text-sm font-medium border border-border rounded-full hover:bg-muted transition-colors text-center">
+                <Link href="/auth" className="flex-1 px-5 py-2.5 text-sm font-medium border border-border rounded-full hover:bg-muted transition-colors text-center">
                   Sign In
                 </Link>
-                <Link href="/dashboard" className="flex-1 px-5 py-2.5 rounded-full bg-foreground text-background text-sm font-medium text-center">
+                <Link href="/app-dashboard" className="flex-1 px-5 py-2.5 rounded-full bg-foreground text-background text-sm font-medium text-center">
                   Get Started
                 </Link>
               </div>

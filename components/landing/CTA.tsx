@@ -27,11 +27,11 @@ const CTA = ({ suppliers = [], categories = [] }: any) => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/dashboard" className="btn-gold flex items-center gap-2 group">
+            <Link href="/app-dashboard" className="btn-gold flex items-center gap-2 group">
               Get Started Now
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="/dashboard" className="btn-secondary">
+            <Link href="/auth" className="btn-secondary">
               Schedule a Demo
             </Link>
           </div>
