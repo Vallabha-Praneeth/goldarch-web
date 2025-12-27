@@ -1,26 +1,14 @@
 import { Resend } from "resend";
+import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function handler(req, res) {
-  // Enable CORS
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
+export async function POST(request) {
   try {
-    const { to, supplierName, quoteDetails, quoteNumber, total } = req.body;
+    const { to, supplierName, quoteDetails, quoteNumber, total } = await request.json();
 
     if (!to) {
-      return res.status(400).json({ error: "Recipient email is required" });
+      return NextResponse.json({ error: "Recipient email is required" }, { status: 400 });
     }
 
     const data = await resend.emails.send({
@@ -72,9 +60,9 @@ export default async function handler(req, res) {
       `,
     });
 
-    return res.status(200).json({ success: true, data });
+    return NextResponse.json({ success: true, data });
   } catch (error) {
     console.error("Email send error:", error);
-    return res.status(500).json({ error: error.message });
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
